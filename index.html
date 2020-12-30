@@ -10,18 +10,20 @@
     <body>
         <header>
             <img src="img/logo/Reservia.svg" alt="Le logo de Reservia" />
-            <a href="#" id="hebergement"class="navbar-link">
-                Hébergements
-            </a>
-            <a href="#" id="activites" class="navbar-link">
-                Activités
-            </a>
             <a href="#" id="inscription-link"class="inscription-link" alt="inscriptions">
                 S'inscrire
             </a>
+            <navbar class="navbar">
+                <a href="#" id="hebergements"class="navbar-link active">
+                    Hébergements
+                </a>
+                <a href="#" id="activites" class="navbar-link">
+                    Activités
+                </a>
+            </navbar>
         </header>
         <main>
-            <div class="searchbar">
+            <div id="searchbar">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
                 <form action="#" class="city-search">
@@ -32,31 +34,190 @@
                 </form>
                 
                 <div id="filtres">
-                    <p>Filtres</p>
-                        <a href="#" class="bouton">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <p>Économique</p></a>
-                  
-                  
-                        <a href="#" class="bouton"><div class="icon">
-                            <i class="fas fa-child"></i>
+                    <h2>Filtres</h2>
+                    <ul>
+                        <li>
+                            <a href="#" class="bouton">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <p>Économique</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bouton">
+                                <i class="fas fa-child" style="padding:10px 13px 10px 13px;" ></i>
+                                <p >familial</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bouton">
+                                <i class="fas fa-heart"></i>
+                                <p>Romantique</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bouton">
+                                <i class="fas fa-dog"></i>
+                                <p>Animaux autorisés</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info"><i class="fas fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p></div>
+            </div>
+            <div id="populaires">
+                <div class="subtitle"><h2>Les plus populaires</h2>
+                <p><i class="fas fa-chart-line"></i></p></div>
+                <figure>
+                    <img src="img/heberg/07.jpg" alt="" />
+                    <figcaption>
+                        <h3>Hôtel Le soleil du matin</h3>
+                        <p>Nuit à partir de <em>128€</em></p>
+                        <div class="note">
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
                         </div>
-                        <p>familial</p></a>
-                   
-                   
-                        <a href="#" class="bouton"><div class="icon">
-                            <i class="fas fa-heart"></i>
+                    </figcaption>
+                </figure> 
+                <figure>
+                    <img src="img/heberg/08.jpg" alt="" />
+                    <figcaption>
+                        <h3>Au cœur de l'eau Chambres d'hôtes</h3>
+                        <p>Nuit à partir de <em>71€</em></p>
+                        <div class="note">
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star"></i>
                         </div>
-                        <p>Romantique</p></a>
-                    
-                    
-                        <a href="#" class="bouton"><div class="icon">
-                            <i class="fas fa-dog"></i>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="img/heberg/09.png" alt="" />
+                    <figcaption>
+                        <h3>Hôtel Tout bleu et Blanc</h3>
+                        <p>Nuit à partir de <em>68€</em></p>
+                        <div class="note">
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
+                            <i class="fas fa-star blue" ></i>
                         </div>
-                        <p>Animaux autorisés</p></a></div>
-                    <div class="info"><i class="fas fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p></div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div id="hebergement">
+                <h2>Hébergements à Marseille</h2>
+                <ul>
+                    <li>
+                        <figure>
+                            <img src="img/heberg/01.jpg" alt="" />
+                            <figcaption>
+                                <h3>Auberge la Cannebière</h3>
+                                <p>Nuit à partir de <em>25€</em></p>
+                                <div class="note">
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star" ></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                         <figure>
+                            <img src="img/heberg/02.jpg" alt="" />
+                            <figcaption>
+                                <h3>Hôtel du port</h3>
+                                <p>Nuit à partir de <em>52€</em></p>
+                                <div class="note">
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/heberg/03.jpg" alt="" />
+                            <figcaption>
+                                <h3>Hôtel Les mouettes</h3>
+                                <p>Nuit à partir de <em>76€</em></p>
+                                <div class="note">
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/heberg/04.png" alt="" />
+                            <figcaption>
+                                <h3>Hôtel de la mer</h3>
+                                <p>Nuit à partir de <em>46€</em></p>
+                                <div class="note">
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star" ></i>
+                                    <i class="fas fa-star" ></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/heberg/05.jpg" alt="" />
+                            <figcaption>
+                                <h3>Auberge Le panier</h3>
+                                <p>Nuit à partir de <em>23€</em></p>
+                                <div class="note">
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star" ></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/heberg/06.png" alt="" />
+                            <figcaption>
+                                <h3>Hôtel chez Amina</h3>
+                                <p>Nuit à partir de <em>96€</em></p>
+                                <div class="note">
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                    <i class="fas fa-star blue" ></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <a href="#" class="givemore" alt="afficher plus">Afficher plus</a>
+                </div>
                 
-
+               
+                
+                
+                
+                
             </div>
         </main>
     </body>

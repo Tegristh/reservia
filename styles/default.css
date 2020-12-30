@@ -6,7 +6,7 @@
 /*généralités */
 html {
     padding: 0px;
-    margin:4px;
+    margin:0px;
 }
 body {
     font-family: 'Raleway', sans-serif;
@@ -21,11 +21,16 @@ a {
     font-weight: 500;
     text-decoration: none;
 }
+main {
+    display:grid;
+    grid-template-columns: 65% auto;
+    grid-template-rows: auto auto;
+}
 /* en tete */
 header{
     display:grid;
-    grid-template-columns:auto auto auto auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns:10% auto  30% 10%;
+    grid-template-rows: auto ;
     align-items: center;
     justify-items: center;
 }
@@ -38,49 +43,45 @@ header img {
 .navbar {
     grid-column: 3;
     grid-row: 1;
+    display:flex;
+    align-items:baseline;
+    justify-content: center;
 }
-.navbar ul {
+.navbar a {
     justify-self: center;
-    width:100%;
-    list-style-type: none;
+    align-self: center;
+    width:50%;
     display: flex;
     flex-flow: row nowrap;
-    align-items:stretch ;
 }
 .navbar-link  {
     width:50%;
-    margin: 20px 20px 20px 20px;
-    padding: 20px;
+    margin: 0px 20px 20px 20px;
+    padding-top: 20px;
 }
 .active {
-    padding-top: 17px;
+    
     border-width: 3px 0 0 0;
     border-color:#0065fc;
     border-style: solid;
     color:#0065fc;
     font-weight: 500;
 }
-#activites {
-    grid-column: 4;
-   
-}
-#hebergement {
-   grid-column: 3;
-}
-
 #inscription-link {
-    grid-column: 5;
+    grid-column: 4;
     grid-row:1;
     color:#0065fc;
     font-weight: 900;
 }
 /* division searchbar */
-.searchbar {
-    padding-top: 30px;
+#searchbar {
+    padding-top: 10px;
+    grid-row: 1;
+    grid-column: 1/3;
 }
 h1 {
     font-size: 21px;
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 0px;
 }
 p {
@@ -95,13 +96,13 @@ label i{
     background-color: #f2f2f2;
     border:3px solid #f2f2f2;
     color:#000000;
-    padding: 15px;
+    padding: 10px;
     margin:0px;
     border-radius:  15px 0 0 15px;
 }
 input[type=text] {
     border:3px solid #f2f2f2;
-    padding: 13px;
+    padding: 7px;
     margin:0px;
     font-size: 18px;
     font-weight: 600;
@@ -117,7 +118,7 @@ input[type=text]:focus {
     border:3px solid #0065fc;
     font-weight: 700;
     color:#FFFFFF;
-    padding: 15px;
+    padding: 10px;
     margin:-2px;
     border-radius: 0 15px 15px 0;
 }
@@ -125,43 +126,59 @@ input[type=text]:focus {
     display:none;
 }
 /* filtres */
+h2 {
+    font-size: 21px;
+    font-weight: 700;
+    padding-left: 20px;
+   
+}
 #filtres {
+    
     display:flex;
     flex-flow: row wrap;
     align-items:center;
     justify-items: baseline;
-
+}
+ul {
+    list-style-type: none;
+    display:flex;
+    flex-flow: row wrap;
 }
 .bouton {
     margin: 20px;
     padding:-2px;
-    font-size:21px;
+    font-size:16px;
     font-weight: 800 ;
     display:flex;
     flex-flow: row nowrap;    
     align-items: baseline;
 }
 #filtres a p{
-    padding:17px 20px 17px 50px;
-    margin-left:-50px;
+    /* texte du bouton et border */
+    padding:7px 10px 7px 30px;
+    margin-left:-32px;
     color:black;
     border-style: solid;
     border-color:#f2f2f2;
     border-width: 3px 3px 3px 0;
     border-radius: 0 30px 30px 0;
 }
+
 #filtres a i{
+    /* icone bouton */
     color:#0065fc;
-    padding:20px 22px;
+    padding:10px ;
     margin-right:10px;
     border-radius: 50%;
     background-color: #deebff;
 }
+
 .info {
     display:flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-items: baseline;
+    margin-bottom: 30px;
 }
 .info i{
     font-size: 10px;
@@ -172,8 +189,113 @@ input[type=text]:focus {
 }
 .info p {
     padding-left: 5px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 12px;
+}
+/* stars */
+.blue  {
+    color:#0065fc;
+}
+h3 {
+    margin:0px;
+    padding:5px;
+    font-size: 14px;
+}
+figcaption p {
+    margin:0px;
+    padding:5px;
+    font-size: 12px;
+}
+em {
+    font-weight: 800;
+}
+.note {
+   
+    margin:0px;
+    padding: 5px;
+    color:#f2f2f2;
+}
+/* populaires */
+#populaires {
+    grid-row: 2;
+    grid-column: 2;
+    background-color:#f2f2f2;
+    border-radius: 30px;
+   
+    margin-left:15px;
+    padding:10px; 
+    padding-top:20px;
+}
+#populaires div p {
+    padding-right:20px;
+}
+#populaires figure {
+    display:flex;
+    background-color:#FFF;
+    flex-flow:row nowrap;
+    padding:3px;
+    margin:40px 20px;
+    border-radius:15px;
+}
+#populaires ul {
+    display:flex;
+    flex-flow: row wrap;
+}
+#populaires ul li{
+    width: 90%;
+    height: 33%;
+}
+#populaires figure img {
+    border-radius: 15px 0 0 15px;
+    width:40%;
+    
+}
+.subtitle {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.givemore {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+/* hebergements */
+#hebergement {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    margin-right: 15px;
+    padding:10px;
+    padding-top: 20px;
+    padding-bottom:20px;
+   
+}
+#hebergement figure {
+    display:flex;
+    flex-flow: column wrap;
+    background-color:#FFF;
+    padding:3px;
+    margin: 15px;
+    border-radius:15px;
+}
+#hebergement figcaption{
+    padding:0 10px 0 0px;
+}
+#hebergement ul {
+    display:flex;
+    flex-flow: row wrap;
+    padding-left:0px;
+}
+#hebergement ul li {
+    width:33%;
+    height: 50%;
+}
+#hebergement figure img {
+    border-radius:15px 15px 0px 0px;
+    width:100%;
 }
 /* mobile */
 @media (min-width:0px) and (max-width:767px) {
@@ -182,30 +304,39 @@ input[type=text]:focus {
     }
     header{
         display:grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns:auto auto;
         grid-template-rows: auto auto;
+    }
+    header img {
+        padding-left:10px;
+    }
+    main {
+        padding-left: 15px;
     }
     .navbar {
         grid-row: 2;
-        grid-column: 1/3;
+        grid-column: 1/-1;
+        width:100vw;
+        display:flex;
+        flex-flow: row nowrap;
     }
-    .hebergement {
-
-    }
-    .activite {
-
-    }
-    .navbar ul {
-        display:grid;
-    
-        grid-template-columns: 50% 50%;
-        align-items: center;
-        justify-items: center;
-    }
-
-    .navbar-link  {
+    .navbar a {
+        text-align:center;
         width:50vw;
+    }
+    .navbar-link  {        
+        margin: 0px ;
+        padding: 20px; 
+        width:100%;
         border-width: 0 0  4px 0;
+        border-color:#f2f2f2;
+        border-style:solid;
+    }
+    .active {
+        border-color:#0065fc;
+        border-style: solid;
+        color:#0065fc;
+        font-weight: 500;
     }
     #inscription-link {
         grid-column: 2;
@@ -220,9 +351,16 @@ input[type=text]:focus {
         border:3px solid #0065fc;
         font-weight: 700;
         color:#FFFFFF;
-        padding: 15px;
-        margin:-2px;
-        border-radius: 0 15px 15px 0;
+        padding: 10px;
+        margin:-15px;
+        border-radius: 15px 15px 15px 15px;
+    }
+    ul {
+        padding:0px;
+    }
+    .bouton {
+        margin:  5px;
+        
     }
 }
 /* tablette */
