@@ -7,11 +7,14 @@
 html {
     padding: 0px;
     margin:0px;
+   
 }
 body {
     font-family: 'Raleway', sans-serif;
     padding:0 50px;
-    margin:0px;
+    margin:auto;
+    width:990px;
+    
 }
 a {
     border-color: #f2f2f2;
@@ -24,7 +27,8 @@ a {
 main {
     display:grid;
     grid-template-columns: 65% auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
+    
 }
 /* en tete */
 header{
@@ -163,7 +167,6 @@ ul {
     border-width: 3px 3px 3px 0;
     border-radius: 0 30px 30px 0;
 }
-
 #filtres a i{
     /* icone bouton */
     color:#0065fc;
@@ -172,7 +175,6 @@ ul {
     border-radius: 50%;
     background-color: #deebff;
 }
-
 .info {
     display:flex;
     flex-flow: row nowrap;
@@ -198,7 +200,7 @@ ul {
 }
 h3 {
     margin:0px;
-    padding:5px;
+    padding:5px 5px 5px 5px;
     font-size: 14px;
 }
 figcaption p {
@@ -242,7 +244,7 @@ em {
     flex-flow: row wrap;
 }
 #populaires ul li{
-    width: 90%;
+    width: 100%;
     height: 33%;
 }
 #populaires figure img {
@@ -277,8 +279,8 @@ em {
     display:flex;
     flex-flow: column wrap;
     background-color:#FFF;
-    padding:3px;
-    margin: 15px;
+    padding: 5px;
+    margin: 5px;
     border-radius:15px;
 }
 #hebergement figcaption{
@@ -296,11 +298,85 @@ em {
 #hebergement figure img {
     border-radius:15px 15px 0px 0px;
     width:100%;
+    height: 90px;
 }
+/* Activités*/
+#activites {
+    
+    grid-row: 3;
+    grid-column: 1/3;
+}
+#activites ul {
+    display:grid;
+    padding-left: 0px;
+    margin:-20px;
+    grid-template-columns: 25% 25% auto auto;
+    grid-template-rows: auto auto;
+
+}
+#activites ul li {
+    padding:20px;
+}
+#activ1 {
+    grid-column: 1;
+    grid-row:1/3;
+   
+}
+#activ2 {
+    grid-column: 2;
+    grid-row:1;
+    
+}
+#activ3 {
+    grid-column: 2;
+    grid-row:2;
+}
+#activ4 {
+    grid-column:3;
+    grid-row:1/3;
+    
+}
+#activ5 {
+    grid-column: 4;
+    grid-row:1;
+    
+}
+#activ6 {
+    grid-column: 4;
+    grid-row:2;
+}
+#activ7{
+    display:none;
+}
+#activ8 {
+    display:none;
+}
+#activites figure{
+    
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #f2f2f2 ;
+    margin:5px;
+    width:100%;
+    height:100%;
+    margin:0px;
+}
+#activites figure img{
+    width:100%;
+    
+    border-radius: 15px 15px 0 0;
+}
+
 /* mobile */
 @media (min-width:0px) and (max-width:767px) {
     body {
         padding:0px;
+        width:100vw;
+    }
+    main {
+        
+        display:flex;
+        flex-flow: column wrap;
+        padding-left:0px;
     }
     header{
         display:grid;
@@ -362,9 +438,84 @@ em {
         margin:  5px;
         
     }
+    #populaires {
+        margin-left:-15px;
+        border-radius: 0;
+    }
+    /* Hebergement*/
+    #hebergement {
+        background:linear-gradient(to bottom, #ffffff, 5%,  #f2f2f2);
+        border-radius: 0px;
+        margin-right:0px;
+        margin-left: -15px;
+        }
+    #hebergement figure {
+        box-shadow: #f2f2f2 1 1 10;
+    }
+    #hebergement ul {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #hebergement ul li {
+        width:100%;
+    }
+    /* Activités */
+    #activites {
+        margin-right:0px;
+        margin-left: -15px;
+    }
+    #activites figure {
+        max-width:95%;
+    }
+    #activites ul {
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+        padding-right:17px;
+        padding-left:17px;
+    }
+    #activites ul li{        
+        width: 100%;
+    }
+    #activ1 {
+        display:none;
+    }
+    #activ2{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #activ3{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #activ4 {
+        display:none;
+    }
+    #activ5{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    #activ6{
+        grid-column: 1;
+        grid-row: 6;
+    }
+    #activ7 {
+        display:block;
+        grid-row: 1;
+    }
+    #activ8{
+        display: block;
+        grid-column: 1;
+        grid-row: 4;
+    }
+
 }
 /* tablette */
 @media (min-width:768px) and (max-width:991px){
+    main {
+        background-color: red;
+        padding-left: 0px;
+    }
     .desktop-bouton {
         display:none;
     }
